@@ -12,6 +12,7 @@ import {
   TENCENT_BASE_URL,
   MOONSHOT_BASE_URL,
   STABILITY_BASE_URL,
+  DEEPSEARCHER_URL,
   IFLYTEK_BASE_URL,
   DEEPSEEK_BASE_URL,
   XAI_BASE_URL,
@@ -46,6 +47,10 @@ const DEFAULT_TENCENT_URL = isApp ? TENCENT_BASE_URL : ApiPath.Tencent;
 const DEFAULT_MOONSHOT_URL = isApp ? MOONSHOT_BASE_URL : ApiPath.Moonshot;
 
 const DEFAULT_STABILITY_URL = isApp ? STABILITY_BASE_URL : ApiPath.Stability;
+
+// const DEFAULT_DEEPSEARCHER_URL = isApp ? DEEPSEARCHER_URL : ApiPath.DeepSearcher;
+
+const DEFAULT_DEEPSEARCHER_URL = DEEPSEARCHER_URL;
 
 const DEFAULT_IFLYTEK_URL = isApp ? IFLYTEK_BASE_URL : ApiPath.Iflytek;
 
@@ -105,6 +110,9 @@ const DEFAULT_ACCESS_STATE = {
   //stability
   stabilityUrl: DEFAULT_STABILITY_URL,
   stabilityApiKey: "",
+
+  //deepsearcher
+  deepsearcherUrl: DEFAULT_DEEPSEARCHER_URL,
 
   // tencent
   tencentUrl: DEFAULT_TENCENT_URL,

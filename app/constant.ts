@@ -1,6 +1,9 @@
 export const OWNER = "ChatGPTNextWeb";
 export const REPO = "ChatGPT-Next-Web";
 export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
+export const DEEPSEARCHER_REPO_URL = `https://github.com/zilliztech/deep-searcher`;
+export const ZILLIZ_CLOUD = `https://cloud.zilliz.com/`;
+export const ZILLIZ_CLOUD_CN = `https://cloud.zilliz.com.cn/`;
 export const PLUGINS_REPO_URL = `https://github.com/${OWNER}/NextChat-Awesome-Plugins`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
@@ -10,6 +13,7 @@ export const FETCH_TAG_URL = `https://api.github.com/repos/${OWNER}/${REPO}/tags
 export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
 
 export const STABILITY_BASE_URL = "https://api.stability.ai";
+export const DEEPSEARCHER_URL = "http://127.0.0.1:8000";
 
 export const OPENAI_BASE_URL = "https://api.openai.com";
 export const ANTHROPIC_BASE_URL = "https://api.anthropic.com";
@@ -49,6 +53,7 @@ export enum Path {
   Auth = "/auth",
   Sd = "/sd",
   SdNew = "/sd-new",
+  DeepSearcher = "/deep-searcher",
   Artifacts = "/artifacts",
   SearchChat = "/search-chat",
   McpMarket = "/mcp-market",
@@ -67,6 +72,7 @@ export enum ApiPath {
   Moonshot = "/api/moonshot",
   Iflytek = "/api/iflytek",
   Stability = "/api/stability",
+  DeepSearcher = "/api/deepsearcher",
   Artifacts = "/api/artifacts",
   XAI = "/api/xai",
   ChatGLM = "/api/chatglm",
@@ -125,6 +131,7 @@ export enum ServiceProvider {
   Tencent = "Tencent",
   Moonshot = "Moonshot",
   Stability = "Stability",
+  DeepSearcher = "DeepSearcher",
   Iflytek = "Iflytek",
   XAI = "XAI",
   ChatGLM = "ChatGLM",

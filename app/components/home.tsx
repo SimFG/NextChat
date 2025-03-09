@@ -75,6 +75,10 @@ const Sd = dynamic(async () => (await import("./sd")).Sd, {
   loading: () => <Loading noLogo />,
 });
 
+const DeepSearcher = dynamic(async () => (await import("./deep-searcher")).Sd, {
+  loading: () => <Loading noLogo />,
+});
+
 const McpMarketPage = dynamic(
   async () => (await import("./mcp-market")).McpMarketPage,
   {
@@ -165,6 +169,7 @@ function Screen() {
   const isAuth = location.pathname === Path.Auth;
   const isSd = location.pathname === Path.Sd;
   const isSdNew = location.pathname === Path.SdNew;
+  const isDeepSearcher = location.pathname === Path.DeepSearcher;
 
   const isMobileScreen = useMobileScreen();
   const shouldTightBorder =
@@ -185,6 +190,7 @@ function Screen() {
     if (isAuth) return <AuthPage />;
     if (isSd) return <Sd />;
     if (isSdNew) return <Sd />;
+    if (isDeepSearcher) return <DeepSearcher />;
     return (
       <>
         <SideBar

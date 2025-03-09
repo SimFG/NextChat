@@ -1400,6 +1400,32 @@ export function Settings() {
       </ListItem>
     </>
   );
+
+  const deepsearcherConfigComponent = accessStore.provider ===
+    ServiceProvider.DeepSearcher && (
+    <>
+      <ListItem
+        title={Locale.Settings.Access.Stability.Endpoint.Title}
+        subTitle={
+          Locale.Settings.Access.Stability.Endpoint.SubTitle +
+          Stability.ExampleEndpoint
+        }
+      >
+        <input
+          aria-label={Locale.Settings.Access.Stability.Endpoint.Title}
+          type="text"
+          value={accessStore.deepsearcherUrl}
+          placeholder={"http://127.0.0.1:8000"}
+          onChange={(e) =>
+            accessStore.update(
+              (access) => (access.deepsearcherUrl = e.currentTarget.value),
+            )
+          }
+        ></input>
+      </ListItem>
+    </>
+  );
+
   const lflytekConfigComponent = accessStore.provider ===
     ServiceProvider.Iflytek && (
     <>
@@ -1818,6 +1844,7 @@ export function Settings() {
                   {moonshotConfigComponent}
                   {deepseekConfigComponent}
                   {stabilityConfigComponent}
+                  {deepsearcherConfigComponent}
                   {lflytekConfigComponent}
                   {XAIConfigComponent}
                   {chatglmConfigComponent}
