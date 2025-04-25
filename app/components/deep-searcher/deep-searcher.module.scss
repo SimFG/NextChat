@@ -20,7 +20,7 @@
       }
       .line-content{
         overflow-y: scroll;
-        height: 130px;
+        max-height: 130px;
         white-space: pre-line;
       }
     }

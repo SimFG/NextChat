@@ -1,6 +1,7 @@
 import { IconButton } from "@/app/components/button";
 import GithubIcon from "@/app/icons/github.svg";
-import SDIcon from "@/app/icons/sd.svg";
+import ZillizIcon from "@/app/icons/zilliz.svg";
+import DeepSearcherIcon from "@/app/icons/deepsearcher.svg";
 import ReturnIcon from "@/app/icons/return.svg";
 import HistoryIcon from "@/app/icons/history.svg";
 import Locale from "@/app/locales";
@@ -101,7 +102,7 @@ export function SideBar(props: { className?: string }) {
               />
             </div>
           </div>
-          <SDIcon width={50} height={50} />
+          <DeepSearcherIcon width={50} height={50} />
           <div className="window-actions">
             <div className="window-action-button">
               <IconButton
@@ -123,7 +124,7 @@ export function SideBar(props: { className?: string }) {
               onClick={() => navigate(Path.Home)}
             />
           }
-          logo={<SDIcon width={38} height={"100%"} />}
+          logo={<DeepSearcherIcon width={38} height={38} />}
         ></SideBarHeader>
       )}
       <SideBarBody>
@@ -135,7 +136,10 @@ export function SideBar(props: { className?: string }) {
             {/* TODO fubang change icon */}
             <div className={homeStyles["sidebar-action"]}>
               <a href={ZILLIZ_CLOUD} target="_blank" rel="noopener noreferrer">
-                <IconButton icon={<GithubIcon />} shadow />
+                <IconButton
+                  icon={<ZillizIcon width={16} height={16} />}
+                  shadow
+                />
               </a>
             </div>
             <div className={homeStyles["sidebar-action"]}>
